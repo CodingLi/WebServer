@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Derby (Embedded) - mysql.properties" uuid="088164ed-b3d2-4391-a84d-5c4d86da271f">
+      <secret-storage>memory</secret-storage>
+      <first-sync>true</first-sync>
+    </data-source>
+    <data-source name="MySQL - mynetsec_news@192.168.139.129" uuid="440ba9e4-fb27-4f52-9966-4a131498078e">
+      <secret-storage>memory</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>mynetsec_news.*</schema-pattern>
+      <default-schemas>mynetsec_news.*</default-schemas>
+    </data-source>
+  </component>
+</project>

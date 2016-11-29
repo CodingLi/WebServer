@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Derby (Embedded) - mysql.properties" uuid="088164ed-b3d2-4391-a84d-5c4d86da271f">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="MySQL - mynetsec_news@192.168.139.129" uuid="440ba9e4-fb27-4f52-9966-4a131498078e">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="mynetsec_news"/>
+      <table id="2" parent="1" name="ns_comments"/>
+      <table id="3" parent="1" name="ns_redian"/>
+      <table id="4" parent="1" name="ns_tuijian"/>
+      <table id="5" parent="1" name="ns_user"/>
+      <table id="6" parent="1" name="ns_zhishu"/>
+      <table id="7" parent="1" name="ns_zixun"/>
+      <column id="8" parent="2" name="comment_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="9" parent="2" name="news_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="10" parent="2" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="11" parent="2" name="user_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="12" parent="2" name="user_email">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="13" parent="2" name="user_ip">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="14" parent="2" name="user_tel">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="15" parent="2" name="comment_date">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="16" parent="2" name="comment_content">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="17" parent="2" name="like_count">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="18" parent="2" name="reply_count">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="19" parent="2" name="comment_parent">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="20" parent="2" name="PRIMARY">
+        <columns>comment_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="21" parent="3" name="redian_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="22" parent="3" name="rediantype_id">
+        <mandatory>1</mandatory>
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="23" parent="3" name="redian_title">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="24" parent="3" name="redian_digest">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="25" parent="3" name="redian_image_link">
+        <mandatory>1</mandatory>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="26" parent="3" name="redian_source">
+        <mandatory>1</mandatory>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="27" parent="3" name="redian_publish_time">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="28" parent="3" name="redian_insert_time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="29" parent="3" name="redian_content">
+        <mandatory>1</mandatory>
+        <data-type>longtext</data-type>
+      </column>
+      <column id="30" parent="3" name="redian_tags">
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="31" parent="3" name="redian_comment_status">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;open&apos;</default-expression>
+      </column>
+      <column id="32" parent="3" name="redian_comment_count">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="33" parent="3" name="redian_check_status">
+        <mandatory>1</mandatory>
+        <data-type>int(2)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <key id="34" parent="3" name="PRIMARY">
+        <columns>redian_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="35" parent="4" name="tuijian_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="36" parent="4" name="tuijiantype_id">
+        <mandatory>1</mandatory>
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="37" parent="4" name="tuijian_title">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="38" parent="4" name="tuijian_digest">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="39" parent="4" name="tuijian_image_link">
+        <mandatory>1</mandatory>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="40" parent="4" name="tuijian_source">
+        <mandatory>1</mandatory>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="41" parent="4" name="tuijian_publish_time">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="42" parent="4" name="tuijian_insert_time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="43" parent="4" name="tuijian_content">
+        <mandatory>1</mandatory>
+        <data-type>longtext</data-type>
+      </column>
+      <column id="44" parent="4" name="tuijian_tags">
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="45" parent="4" name="tuijian_comment_status">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;open&apos;</default-expression>
+      </column>
+      <column id="46" parent="4" name="tuijian_comment_count">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="47" parent="4" name="tuijian_check_status">
+        <mandatory>1</mandatory>
+        <data-type>int(2)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <key id="48" parent="4" name="PRIMARY">
+        <columns>tuijian_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="49" parent="5" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="50" parent="5" name="user_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="51" parent="5" name="user_pass">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="52" parent="5" name="user_logo">
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="53" parent="5" name="user_email">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="54" parent="5" name="user_tel">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="55" parent="5" name="user_reg_time">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="56" parent="5" name="user_reg_ip">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="57" parent="5" name="user_status">
+        <mandatory>1</mandatory>
+        <data-type>int(2)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <key id="58" parent="5" name="PRIMARY">
+        <columns>user_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="59" parent="6" name="zhishu_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="60" parent="6" name="zhishutype_id">
+        <mandatory>1</mandatory>
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="61" parent="6" name="zhishu_title">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="62" parent="6" name="zhishu_digest">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="63" parent="6" name="zhishu_image_link">
+        <mandatory>1</mandatory>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="64" parent="6" name="zhishu_source">
+        <mandatory>1</mandatory>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="65" parent="6" name="zhishu_publish_time">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="66" parent="6" name="zhishu_insert_time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="67" parent="6" name="zhishu_content">
+        <mandatory>1</mandatory>
+        <data-type>longtext</data-type>
+      </column>
+      <column id="68" parent="6" name="zhishu_tags">
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="69" parent="6" name="zhishu_comment_status">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;open&apos;</default-expression>
+      </column>
+      <column id="70" parent="6" name="zhishu_comment_count">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="71" parent="6" name="zhishu_check_status">
+        <mandatory>1</mandatory>
+        <data-type>int(2)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <key id="72" parent="6" name="PRIMARY">
+        <columns>zhishu_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="73" parent="7" name="zixun_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="74" parent="7" name="zixuntype_id">
+        <mandatory>1</mandatory>
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="75" parent="7" name="zixun_title">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="76" parent="7" name="zixun_digest">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="77" parent="7" name="zixun_image_link">
+        <mandatory>1</mandatory>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="78" parent="7" name="zixun_source">
+        <mandatory>1</mandatory>
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="79" parent="7" name="zixun_publish_time">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="80" parent="7" name="zixun_insert_time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="81" parent="7" name="zixun_content">
+        <mandatory>1</mandatory>
+        <data-type>longtext</data-type>
+      </column>
+      <column id="82" parent="7" name="zixun_tags">
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="83" parent="7" name="zixun_comment_status">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;open&apos;</default-expression>
+      </column>
+      <column id="84" parent="7" name="zixun_comment_count">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="85" parent="7" name="zixun_check_status">
+        <mandatory>1</mandatory>
+        <data-type>int(2)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <key id="86" parent="7" name="PRIMARY">
+        <columns>zixun_id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

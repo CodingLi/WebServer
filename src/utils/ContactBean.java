@@ -1,15 +1,21 @@
 package utils;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.*;
 import java.util.*;
 
 
 public class ContactBean {
 
-	private static final String DRIVER = "org.gjt.mm.mysql.Driver";
-	private static final String URLSTR = "jdbc:mysql://192.168.139.129:3306/mynetsec_news";
-	private static final String USER = "root";
-	private static final String PWD = "root";
+//	private static final String DRIVER = "org.gjt.mm.mysql.Driver";
+//	private static final String URLSTR = "jdbc:mysql://192.168.139.129:3306/mynetsec_news";
+//	private static final String USER = "root";
+//	private static final String PWD = "root";
+	private static String DRIVER = "";
+	private static String URLSTR = "";
+	private static String USER = "";
+	private static String PWD = "";
 	//数据库连接对象
 	private Connection connection = null;
 	//创建PreparedStatement对象
@@ -22,9 +28,22 @@ public class ContactBean {
 
 	static {
 		try {
+
+			InputStream in = ContactBean.class.getClassLoader().getResourceAsStream("mysql.properties");
+			Properties properties = new Properties();
+			properties.load(in);
+			//获取驱动名称、url、用户名、密码
+			DRIVER = properties.getProperty("Driver");
+			URLSTR = properties.getProperty("Url");
+			USER = properties.getProperty("username");
+			PWD = properties.getProperty("password");
+
 			//加载数据库驱动程序
 			Class.forName(DRIVER);
-		}catch (ClassNotFoundException e){
+		}catch (IOException e){
+			e.printStackTrace();
+		}
+		catch (ClassNotFoundException e){
 			System.out.println("加载驱动错误");
 			System.out.println(e.getMessage());
 		}
